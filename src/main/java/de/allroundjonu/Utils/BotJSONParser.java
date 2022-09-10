@@ -9,52 +9,55 @@ import java.io.*;
 public class BotJSONParser {
 
     private static String settingsFile = "settings.json";
-    private String embedsFile = "embeds.json";
-    private String localesFile = "locales.json";
-
-    private static JSONObject settings;
-
-    private FileReader settingsReader;
+    private static String embedsFile = "embeds.json";
+    private static String localesFile = "locales.json";
 
     public static boolean checkSettingFiles(){
         File file = new File("settings.json");
         if (!file.exists() && !file.isDirectory()){
-            CustomLogger.log("error", "settings.json existiert nicht");
+            CustomLogger.error("settings.json existiert nicht");
             return false;
         }
-        CustomLogger.log("success", file.getName() + " existiert");
+        CustomLogger.success(file.getName() + " existiert");
         file = new File("embeds.json");
         if (!file.exists() && !file.isDirectory()){
-            CustomLogger.log("error", "embeds.json existiert nicht");
+            CustomLogger.error("embeds.json existiert nicht");
             return false;
         }
-        CustomLogger.log("success", file.getName() + " existiert");
+        CustomLogger.success(file.getName() + " existiert");
         file = new File("locales.json");
         if (!file.exists() && !file.isDirectory()){
-            CustomLogger.log("error", "locales.json existiert nicht");
+            CustomLogger.error("locales.json existiert nicht");
             return false;
         }
-        CustomLogger.log("success", file.getName() + " existiert");
-        CustomLogger.log("success", "Alle Datein existiert");
+        CustomLogger.success(file.getName() + " existiert");
+        CustomLogger.success("Alle Datein existiert");
         return true;
     }
 
 
-    public static boolean startupJSONParser(){
+    public static ConfigFile readConfig(Config config){
+        try{
+            ConfigFile settings = (ConfigFile) new JSONParser().parse(new FileReader(config.getPath()));
+            CustomLogger.success("settings.json is parsed");
+            return settings;
+        } catch (IOException | ParseException e) {
+            CustomLogger.error(e.getMessage());
+            return null;
+        }
+    }
 
-        try (FileReader reader1 = new FileReader(settingsFile)){
-            settings = (JSONObject) new JSONParser().parse(reader1);
-            CustomLogger.log("success", "settings.json is parsed");
-            return true;
-        } catch (FileNotFoundException e) {
-            CustomLogger.log("error", e.getMessage());
-            return false;
-        } catch (IOException e) {
-            CustomLogger.log("error", e.getMessage());
-            return false;
-        } catch (ParseException e) {
-            CustomLogger.log("error", e.getMessage());
-            return false;
+
+    public enum Config{
+        SETTINGS(settingsFile), EMBEDS(embedsFile), LOCALS(localesFile);
+
+        String path;
+        Config(String path){
+            this.path = path;
+        }
+
+        public String getPath() {
+            return path;
         }
     }
 

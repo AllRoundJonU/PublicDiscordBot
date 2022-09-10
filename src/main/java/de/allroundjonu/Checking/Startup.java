@@ -8,7 +8,7 @@ public class Startup {
 
     public static void startUP() throws InterruptedException {
 
-        CustomLogger.log("message", "" +
+        CustomLogger.message("" +
                 "\n   _____ _______       _____ _______ _    _ _____  \n" +
                 " / ____|__   __|/\\   |  __ \\__   __| |  | |  __ \\ \n" +
                 "| (___    | |  /  \\  | |__) | | |  | |  | | |__) |\n" +
@@ -18,17 +18,17 @@ public class Startup {
                 "                                                  \n" +
                 "                                                  ");
 
-        CustomLogger.log("message", "Checking if all necessary files exist...");
+        CustomLogger.message("Checking if all necessary files exist...");
         if (!BotJSONParser.checkSettingFiles()){
-            CustomLogger.log("error", "Bot wird gestoppt!");
+            CustomLogger.error("Bot wird gestoppt!");
             return;
         }
-        CustomLogger.log("message", "Parsing .json files...");
-        if (!BotJSONParser.startupJSONParser()) {
-            CustomLogger.log("error", "Bot wird gestoppt!");
+        CustomLogger.message("Parsing .json files...");
+        if (BotJSONParser.readConfig(BotJSONParser.Config.SETTINGS) == null) {
+            CustomLogger.error("Bot wird gestoppt!");
             return;
         }
-        CustomLogger.log("message", "Checking Database settings...");
+        CustomLogger.message("Checking Database settings...");
 
         System.out.println("Der Bot startet jetzt (Das kann ein bisschen Dauern)");
         System.out.print("LOADING: 0%");
