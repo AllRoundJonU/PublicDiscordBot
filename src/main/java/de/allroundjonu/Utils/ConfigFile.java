@@ -1,8 +1,14 @@
 package de.allroundjonu.Utils;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class ConfigFile extends JSONObject {
+
+    public ConfigFile createFromJsonObject(JSONObject object){
+        this.putAll(object);
+        return this;
+    }
 
     public Object getObject(String key){
         String[] keys = key.split("\\.");

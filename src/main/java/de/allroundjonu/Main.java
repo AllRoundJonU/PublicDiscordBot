@@ -1,6 +1,8 @@
 package de.allroundjonu;
 
 import de.allroundjonu.Checking.Startup;
+import de.allroundjonu.Utils.BotJSONParser;
+import de.allroundjonu.Utils.ConfigFile;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -31,21 +33,6 @@ public class Main {
         * Alle Einstellungen werden als Variablen gespeichert so, das später nichts mehr aus den Dateien ausgelesen werden muss.
         * Heißt aber auch änderungen werden nur wirksam, wenn der Bot neu gestartet wird
         * */
-        System.out.println("Hello world!");
 
-        Startup.startUP();
-
-        try (FileReader reader = new FileReader("settings.json")){
-
-            JSONObject settings = (JSONObject) new JSONParser().parse(reader);
-            JSONObject databaseSettings = (JSONObject) settings.get("databaseSettings");
-            JSONObject botDatabase = (JSONObject) databaseSettings.get("botDatabase");
-
-            System.out.println(botDatabase.get("url"));
-            System.out.println(botDatabase.get("user"));
-            System.out.println(botDatabase.get("password"));
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

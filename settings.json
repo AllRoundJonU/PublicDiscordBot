@@ -14,7 +14,7 @@
 "botSettings": {
 "botToke": "botToke",
 "guildID": "guildID",
-"botAcctivity": {
+"botActivity": {
 "activityType": "playing",
 "activityMessage": "YourGameName"
 }

@@ -38,9 +38,9 @@ public class BotJSONParser {
 
     public static ConfigFile readConfig(Config config){
         try{
-            ConfigFile settings = (ConfigFile) new JSONParser().parse(new FileReader(config.getPath()));
+            JSONObject settings = (JSONObject) new JSONParser().parse(new FileReader(config.getPath()));
             CustomLogger.success("settings.json is parsed");
-            return settings;
+            return new ConfigFile().createFromJsonObject(settings);
         } catch (IOException | ParseException e) {
             CustomLogger.error(e.getMessage());
             return null;

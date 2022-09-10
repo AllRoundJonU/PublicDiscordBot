@@ -34,7 +34,7 @@ public class Startup {
         System.out.print("LOADING: 0%");
         Thread.sleep(1000);
         System.out.print("\b\b");
-        System.out.print("5%");
+        System.out.print("5% (Stells dir einfach vor)");
         System.out.println("  ");
 
 
