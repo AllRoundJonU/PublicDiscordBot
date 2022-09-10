@@ -1,0 +1,52 @@
+{
+"databaseSettings": {
+"botDatabase": {
+"url": "jdbc:mysql://databaseIP:3306/databaseName",
+"user": "UserName",
+"password": "password"
+},
+"additionalDatabase": {
+"url": "jdbc:mysql://databaseIP:3306/databaseName",
+"user": "UserName",
+"password": "password"
+}
+},
+"botSettings": {
+"botToke": "botToke",
+"guildID": "guildID",
+"botAcctivity": {
+"activityType": "playing",
+"activityMessage": "YourGameName"
+}
+},
+"moduleSettings": {
+"TicketSystem": {
+"activated": true,
+"ticketMessageChannelID": "channelID",
+"ticketLogChannelID": "channeldID",
+"ticketCategory": "categoryID"
+},
+"InviteLogger": {
+"activated": true,
+"inviteLogChannelID": "channeldID",
+"countLeave": false,
+"countBan": false,
+"countNewAccount": false
+},
+"DutySystem": {
+"activated": true,
+"dutyMessageChannelID": "channelID",
+"dutyRoleID": "channelID",
+"onDutyChannelID": "channeID or false",
+"dutyLog": "channelID"
+},
+"wishSystem": {
+"activated": true,
+"wishMessageChannelID": "channelID",
+"wishesChannelID": "channelID",
+"": {}
+},
+"": {}
+}
+}
+  
