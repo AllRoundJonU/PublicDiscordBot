@@ -1,49 +1,205 @@
 {
-  "content": "this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```",
-  "embed": {
-    "title": "title ~~(did you know you can have markdown here too?)~~",
-    "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-    "url": "https://discordapp.com",
-    "color": 5682999,
-    "timestamp": "2022-09-10T20:41:59.094Z",
-    "footer": {
-      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-      "text": "footer text"
-    },
-    "thumbnail": {
-      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-    },
-    "image": {
-      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-    },
-    "author": {
-      "name": "author name",
-      "url": "https://discordapp.com",
-      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-    },
-    "fields": [
-      {
-        "name": "🤔",
-        "value": "some of these properties have certain limits..."
-      },
-      {
-        "name": "😱",
-        "value": "try exceeding some of them!"
-      },
-      {
-        "name": "🙄",
-        "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-      },
-      {
-        "name": "<:thonkang:219069250692841473>",
-        "value": "these last two",
-        "inline": true
-      },
-      {
-        "name": "<:thonkang:219069250692841473>",
-        "value": "are inline fields",
-        "inline": true
+  "embeds": [
+    {
+      "name" : "administrationEmbed",
+      "embed": {
+        "title": "────── [🔰] Administration [🔰] ──────",
+        "description": "Using this embed message you can access all the settings of the bot.\nEach module of the bot has a category in the settings, in this category the modules can be further adjusted.",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "© 2019 - 2020"
+        },
+        "author": {
+          "name": "Administration",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        },
+        "fields": [
+          {
+            "name": "\uD83C\uDFAB Ticketsystem",
+            "value": "The ticket system is a module that allows you to create tickets for your users",
+            "inline": false
+          },
+          {
+            "name": "\uD83C\uDF20 Wish System",
+            "value": "The wish system is a module that allows you to create wishes for your users",
+            "inline": false
+          },
+          {
+            "name": "\uD83D\uDD17 Invite Logger",
+            "value": "The invite logger is a module that allows you to log all invites that are sent in your server",
+            "inline": false
+          },
+          {
+            "name": "\uD83D\uDC65 Auto Role",
+            "value": "The auto role is a module that allows you to automatically assign a role to a user when he joins the server",
+            "inline": false
+          },
+          {
+            "name": "\uD83D\uDC4B Welcome Message",
+            "value": "The welcome message is a module that allows you to send a message to a channel when a user joins the server",
+            "inline": false
+          },
+          {
+            "name": "\uD83D\uDC4E Leave Message",
+            "value": "The leave message is a module that allows you to send a message to a channel when a user leaves the server",
+            "inline": false
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "name" : "modulDisableEmbed",
+      "embed": {
+        "description": "You can´t perform this action because the module is disabled",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Ticket System"
+        },
+        "author": {
+          "name": "Administration",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    },
+    {
+      "name" : "ticketSystemEmbed",
+      "embed": {
+        "title": "────── [🔰] Ticket System [🔰] ──────",
+        "description": "Using this embed message you can access all the settings of the ticket system.",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "© 2019 - 2020"
+        },
+        "author": {
+          "name": "Administration",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        },
+        "fields": [
+          {
+            "name": "Modul Status",
+            "value": "<@modulStatus>",
+            "inline": true
+          },
+          {
+            "name": "Ticket Channel",
+            "value": "<@ticketChannel>",
+            "inline": true
+          },
+          {
+            "name": "Ticket Category",
+            "value": "<@ticketCategory>",
+            "inline": true
+          },
+          {
+            "name": "Ticket Log Channel",
+            "value": "<@ticketLogChannel>",
+            "inline": true
+          }
+        ]
+      }
+    },
+    {
+      "name" : "ticketSystemMessageEmbed",
+      "embed": {
+        "description": "Please use one of the following Topics to create a ticket.\n**IMPORTANT**\n● Do not open tickets without reason.\n● Use the correct templates.",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Ticket System"
+        },
+        "author": {
+          "name": "Ticket System",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    },
+    {
+      "name" : "ticketSystemMessageUpdateEmbed",
+      "embed": {
+        "description": "The ticket system message has been updated",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Ticket System"
+        },
+        "author": {
+          "name": "Ticket System",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    },
+    {
+      "name" : "ticketSystemAddTypeEmbed",
+      "embed": {
+        "title": "──── Ticket-Type-Creator ─────",
+        "description": "Welcome to the Ticket-Type-Creator!\n1. Create a new Channel\n2. Name the Channel like the Ticket Name\n3. Set the Channel Topic to the Ticket-Description\n4. Set the Channel Permissions to the Ticket Type Permissions\n5. Press the Button below to create the Ticket Type",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Ticket System"
+        },
+        "author": {
+          "name": "Ticket System",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    },
+    {
+      "name" : "ticketSystemCreateNewTicketType",
+      "embed": {
+        "title": "──── Ticket-Type-Creator ─────",
+        "description": "You have successfully created a new Ticket Type. To add a Embed Message to the Ticket Type, please use the button below.",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Ticket System"
+        },
+        "author": {
+          "name": "Ticket System",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    },
+    {
+      "name" : "WishEmbed",
+      "embed": {
+        "title": "────── [\uD83C\uDF20] Wish [\uD83C\uDF20] ──────",
+        "description": "You can wish for anything you want, but be careful what you wish for.\nOnly wishes are written here, if something else is written here the messages will be deleted.\nIn <@wishChannel> you can vote for each wish whether you like it or not.",
+        "url": "https://discordapp.com",
+        "color": "255,255,255",
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "text": "Example Footer Text"
+        },
+        "thumbnail": {
+          "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        },
+        "image": {
+          "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        },
+        "author": {
+          "name": "Wish System",
+          "url": "https://discordapp.com",
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      }
+    }
+  ]
 }

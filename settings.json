@@ -1,52 +1,62 @@
 {
-"databaseSettings": {
-"botDatabase": {
-"url": "jdbc:mysql://databaseIP:3306/databaseName",
-"user": "UserName",
-"password": "password"
-},
-"additionalDatabase": {
-"url": "jdbc:mysql://databaseIP:3306/databaseName",
-"user": "UserName",
-"password": "password"
-}
-},
-"botSettings": {
-"botToke": "botToke",
-"guildID": "guildID",
-"botActivity": {
-"activityType": "playing",
-"activityMessage": "YourGameName"
-}
-},
-"moduleSettings": {
-"TicketSystem": {
-"activated": true,
-"ticketMessageChannelID": "channelID",
-"ticketLogChannelID": "channeldID",
-"ticketCategory": "categoryID"
-},
-"InviteLogger": {
-"activated": true,
-"inviteLogChannelID": "channeldID",
-"countLeave": false,
-"countBan": false,
-"countNewAccount": false
-},
-"DutySystem": {
-"activated": true,
-"dutyMessageChannelID": "channelID",
-"dutyRoleID": "channelID",
-"onDutyChannelID": "channeID or false",
-"dutyLog": "channelID"
-},
-"wishSystem": {
-"activated": true,
-"wishMessageChannelID": "channelID",
-"wishesChannelID": "channelID",
-"": {}
-},
-"": {}
-}
+  "databaseSettings": {
+    "botDatabase": {
+      "url": "jdbc:mysql://localhost:3306/botdatabase",
+      "user": "root",
+      "password": ""
+    },
+    "additionalDatabase": {
+      "url": "jdbc:mysql://databaseIP:3306/databaseName",
+      "user": "UserName",
+      "password": "password"
+    }
+  },
+  "botSettings": {
+    "botToke": "OTc1MDI4NDA5MTkxMjY4MzYz.Gi5ucs.E1kMXBbxarr9mS_Syiw45TX67d-GvYjJAKdvrA",
+    "guildID": "891746288612311101",
+    "botActivity": {
+      "activityType": "watching",
+      "activityMessage": "/help - for help"
+    }
+  },
+  "moduleSettings": {
+    "TicketSystem": {
+      "activated": true,
+      "ticketMessageChannelID": "996896866664972442",
+      "ticketLogChannelID": "996896866664972442",
+      "ticketCategory": "996804424649420850"
+    },
+    "wishSystem": {
+      "activated": true,
+      "wishMessageChannelID": "996896866664972442",
+      "wishesChannelID": "996896866664972442"
+    },
+    "InviteLogger": {
+      "activated": true,
+      "inviteLogChannelID": "996896866664972442",
+      "countLeave": false,
+      "countBan": false,
+      "countNewAccount": false
+    },
+    "AutoRole": {
+      "activated": true,
+      "roleID": "roleID"
+    },
+    "WelcomeMessage": {
+      "activated": true,
+      "welcomeChannelID": "channelID"
+    },
+    "LeaveMessage": {
+      "activated": true,
+      "leaveChannelID": "channelID"
+    },
+    "DutySystem": {
+      "activated": true,
+      "dutyMessageChannelID": "channelID",
+      "dutyRoleID": "channelID",
+      "onDutyChannelID": "channelID or false",
+      "dutyLog": "channelID"
+    }
+  }
 }
   

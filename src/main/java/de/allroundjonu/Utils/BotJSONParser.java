@@ -31,7 +31,6 @@ public class BotJSONParser {
             return false;
         }
         CustomLogger.success(file.getName() + " existiert");
-        CustomLogger.success("Alle Datein existiert");
         return true;
     }
 
